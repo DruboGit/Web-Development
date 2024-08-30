@@ -1,0 +1,17 @@
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    background-color: aquamarine;
+}
+
+#text {
+    font-family: "Comic Sans MS";
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
