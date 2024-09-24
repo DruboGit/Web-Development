@@ -1,0 +1,26 @@
+.nav {
+    display: inline-block;
+}
+
+#messageInput {
+    width: 95%;
+}
+
+@media only screen and (max-width: 600px) {
+    #username {
+        width: 40%;
+    }
+    #messageInput {
+        width: 80%;
+    }
+}
+
+.message {
+    border: 1px black;
+    border-style: solid;
+}
+
+#username {
+    float: right;
+    margin-top: 25px;
+}
