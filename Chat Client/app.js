@@ -6,6 +6,7 @@ const PORT = 3000
 
 app.use(express.static('public'))
 app.use(cors())
+app.use(express.json())
 
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -25,6 +26,18 @@ app.get('/getMessage', (req, res) => {
     .then(([rows, fields]) => {
         console.log(rows)
         res.send(rows)
+        })
+        .catch(console.log)
+})
+
+app.post('/sendMessage', (req, res) => {
+    let timestamp = Math.floor(Date.now() / 1000)
+    console.log(req.body)
+    connection
+        .promise()
+        .query(`INSERT INTO messages(message, username, time) VALUES ("${req.body.message}", "${req.body.username}", "${timestamp}")`)
+        .then(([rows, fields]) => {
+            res.sendStatus(200)
         })
         .catch(console.log)
 })

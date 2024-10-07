@@ -15,12 +15,24 @@
     }
 }
 
-.message {
-    border: 1px black;
+#message {
+    border: 3px black;
     border-style: solid;
+    padding-left: 10px;
+    margin-top: 5px;
+    background-color: lightblue;
 }
 
 #username {
     float: right;
     margin-top: 25px;
+}
+
+.space {
+    margin-bottom: 0px;
+}
+
+.topSpace {
+    margin-top: 20px;
+    display: block;
 }
