@@ -35,7 +35,7 @@ app.post('/sendMessage', (req, res) => {
     console.log(req.body)
     connection
         .promise()
-        .query(`INSERT INTO messages(message, username, time) VALUES ("${req.body.message}", "${req.body.username}", "${timestamp}")`)
+        .query(`INSERT INTO messages(message, username, time) VALUES ('${req.body.message}', '${req.body.username}', "${timestamp}")`)
         .then(([rows, fields]) => {
             res.sendStatus(200)
         })
