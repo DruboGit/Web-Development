@@ -20,7 +20,7 @@ function getMessage() {
             let day = timestamp.getDate();
             let hour = timestamp.getHours();
             let minute = timestamp.getMinutes();
-     
+
             let time = `${(hour).toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}, ${year}/${(month + 1).toString().padStart(2, '0')}/${day.toString().padStart(2, '0')}`;
             if (lastUser === messages.username) 
                 messageBox.innerHTML = (`<b>${time}</b> : ${messages.message}`)

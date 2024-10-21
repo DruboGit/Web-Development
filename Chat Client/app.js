@@ -24,7 +24,6 @@ app.get('/getMessage', (req, res) => {
     .promise()
     .query('SELECT * FROM messages')
     .then(([rows, fields]) => {
-        console.log(rows)
         res.send(rows)
         })
         .catch(console.log)
@@ -32,7 +31,6 @@ app.get('/getMessage', (req, res) => {
 
 app.post('/sendMessage', (req, res) => {
     let timestamp = Math.floor(Date.now() / 1000)
-    console.log(req.body)
     connection
         .promise()
         .query(`INSERT INTO messages(message, username, time) VALUES ('${req.body.message}', '${req.body.username}', "${timestamp}")`)

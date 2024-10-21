@@ -2,6 +2,14 @@
     display: inline-block;
 }
 
+body {
+    background-color: black;
+}
+
+h2 {
+    color: white;
+}
+
 #messageInput {
     width: 95%;
 }
@@ -16,11 +24,13 @@
 }
 
 #message {
-    border: 3px black;
+    border: 3px white;
     border-style: solid;
     padding-left: 10px;
     margin-top: 5px;
-    background-color: lightblue;
+    background-color: #363533;
+    overflow-wrap: break-word;
+    color: white;
 }
 
 #username {
