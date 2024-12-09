@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="style.css")
+    body
+        nav 
+            button(id="leftButton")= "Previous day"
+            h1(id="date")= cur_date
+            button(id="rightButton")= "Next day"
+        main
+            div(id="center")
+                each i in info
+                    div(class="weather")
+                        p(id="time")= i[0]
+                        p(id="temp")= `Temperature: ${i[1]}`
+                        p(id="weather")= `Weather: ${i[2]}`
+                        p(id="wind")= `Wind (gust): ${i[3]}m/s (${[4]}m/s)`
+                        p(id="humidity")= `Humidity: ${i[5]}%`
+                        img(id="weather-png", src="/" + i[2] + ".png", alt=i[2])
+    
+        script
+            include ../public/script.js 
